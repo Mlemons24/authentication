@@ -21,10 +21,8 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/firstname_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:textColorHint="@color/white" />
+            style="@style/TextInputET"
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -39,10 +37,8 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/lastname_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:textColorHint="@color/white" />
+            style="@style/TextInputET"
+            android:inputType="text" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -56,11 +52,9 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/TextInputET"
             android:hint="email"
-            android:inputType="textEmailAddress"
-            android:textColorHint="@color/white" />
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -73,8 +67,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/TextInputET"
             android:hint="password"
             android:inputType="textPassword" />
 
@@ -91,8 +84,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/confirmpassword_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/TextInputET"
             android:hint="confirmpassword"
             android:inputType="textPassword" />
 

@@ -17,11 +17,9 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:hint="email" />
+            style="@style/TextInputET"
+            android:hint="email"
+            tools:text="mlmeons24@gmail.com" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -34,14 +32,10 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            style="@style/TextInputET"
             android:layout_marginTop="8dp"
-            android:background="@color/color_secondary"
             android:hint="password"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
 

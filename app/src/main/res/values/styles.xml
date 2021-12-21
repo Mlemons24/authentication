@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:layout_width">0dp</item>
-    <item name="android:textColorHint"> @color/white</item>
-    <item name="android:background">@color/color_secondary</item>
-    <item name="hintTextColor">@color/white</item>
-    <item name="boxStrokeColor">@color/color_highlight</item>
-    <item name="android:textColorHint">@color/color_accent</item>
-    <item name="colorControlActivated">@color/color_accent</item>
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-</style>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="hintTextColor">@color/white</item>
+        <item name="boxStrokeColor">@color/color_highlight</item>
+        <item name="android:textColorHint">@color/color_accent</item>
+        <item name="colorControlActivated">@color/color_accent</item>
+
+    </style>
+
+    <style name="TextInputET">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/color_secondary</item>
+    </style>
 
 </resources>
