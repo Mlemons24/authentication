@@ -25,7 +25,6 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordlayout"
         style="@style/TextInputLayoutStyle"
-        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/emaillayout">
@@ -33,7 +32,6 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password_et"
             style="@style/TextInputET"
-            android:layout_marginTop="8dp"
             android:hint="password"
             android:inputType="textPassword" />
 
@@ -41,10 +39,7 @@
 
     <Button
         android:id="@+id/login_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/color_accent"
+        style="@style/RoundButton"
         android:text="login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,10 +47,7 @@
 
     <Button
         android:id="@+id/registration_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/color_accent"
+        style="@style/RoundButton"
         android:text="register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,10 +55,7 @@
 
     <Button
         android:id="@+id/forgotpassword_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/color_accent"
+        style="@style/RoundButton"
         android:text="forgot password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
