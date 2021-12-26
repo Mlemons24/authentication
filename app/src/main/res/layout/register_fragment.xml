@@ -12,10 +12,11 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/firstname_layout"
         style="@style/TextInputLayoutStyle"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintEnd_toStartOf="@id/lastname_layout"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="2dp"
         android:hint="firstname"
+        app:layout_constraintEnd_toStartOf="@id/lastname_layout"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -28,10 +29,11 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/lastname_layout"
         style="@style/TextInputLayoutStyle"
-        app:layout_constraintHorizontal_bias="0.5"
         android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
         android:hint="lastname"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/firstname_layout"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -45,7 +47,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email_layout"
         style="@style/TextInputLayoutStyle"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/firstname_layout">
@@ -60,7 +62,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password_layout"
         style="@style/TextInputLayoutStyle"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/email_layout">
@@ -77,7 +79,7 @@
 
         android:id="@+id/confirm_password_layout"
         style="@style/TextInputLayoutStyle"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/password_layout">
@@ -93,10 +95,15 @@
     <Button
         android:id="@+id/registration_btn"
         style="@style/RoundButton"
+        android:layout_width="113dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="32dp"
         android:text="register"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/confirm_password_layout" />
+        app:layout_constraintTop_toBottomOf="@id/confirm_password_layout"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

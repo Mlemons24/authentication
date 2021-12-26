@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import com.example.authenticationapp.R
 import androidx.fragment.app.viewModels
 import com.example.authenticationapp.data.UserRepo
@@ -30,7 +31,7 @@ class LoginFragment : Fragment() {
     private lateinit var passwordET:EditText
     private lateinit var loginBTN:Button
     private lateinit var registerBTN:Button
-    private lateinit var forgotpass:Button
+    private lateinit var forgotpass:TextView
 
 
     override fun onCreateView(
@@ -42,7 +43,7 @@ class LoginFragment : Fragment() {
         passwordET= view?.findViewById(R.id.password_et)!!
         loginBTN= view?.findViewById(R.id.login_btn)!!
         registerBTN= view?.findViewById(R.id.registration_btn)!!
-        forgotpass= view?.findViewById(R.id.forgotpassword_btn)!!
+        forgotpass= view?.findViewById(R.id.forgot_password)!!
 
         loginBTN.setOnClickListener {
             Log.d("click","clickedloginbtn")
