@@ -1,17 +1,16 @@
 package com.example.authenticationapp.register
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
+import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.authenticationapp.R
 import com.example.authenticationapp.data.UserRepo
+import com.example.authenticationapp.databinding.RegisterFragmentBinding
 
 class RegisterFragment : Fragment() {
 
@@ -22,35 +21,24 @@ class RegisterFragment : Fragment() {
     private val viewModel: RegisterViewModel by viewModels {
         RegisterVMFactory(UserRepo())
     }
-
-    private lateinit var firstname: EditText
-    private lateinit var lastname: EditText
-    private lateinit var emailET: EditText
-    private lateinit var passwordET: EditText
-    private lateinit var confirmpassword: EditText
-    private lateinit var registerBTN: Button
+    private lateinit var binding: RegisterFragmentBinding
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view =inflater.inflate(R.layout.register_fragment, container, false)
+    ): View {
 
-        firstname = view?.findViewById(R.id.firstname_et)!!
-        lastname = view?.findViewById(R.id.lastname_et)!!
-        emailET = view?.findViewById(R.id.email_et)!!
-        passwordET = view?.findViewById(R.id.password_et)!!
-        confirmpassword = view?.findViewById(R.id.confirmpassword_et)!!
-        registerBTN = view?.findViewById(R.id.registration_btn)!!
+        binding = DataBindingUtil.inflate(inflater, R.layout.register_fragment, container, false)
 
-
-        registerBTN.setOnClickListener {
+        binding.registrationBtn.setOnClickListener {
             Log.d("click", "clickedregisterbtn")
             requireActivity().supportFragmentManager.popBackStack()
 
         }
-        return view
+        return binding.root
+
 
     }
+
 }

@@ -7,17 +7,23 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:textColorHint">@color/white</item>
         <item name="hintTextColor">@color/white</item>
-        <item name="boxStrokeColor">@color/color_highlight</item>
-        <item name="android:textColorHint">@color/color_accent</item>
+        <item name="boxStrokeColor">@color/text_input_layout_selector</item>
         <item name="colorControlActivated">@color/color_accent</item>
-
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="colorControlNormal">@color/color_accent</item>
+        <item name="colorOnSurface">@color/color_accent</item>
+        <item name="colorPrimary">@color/color_primary</item>
     </style>
 
     <style name="TextInputET">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:background">@color/color_secondary</item>
+        <item name="colorControlHighlight">@color/color_highlight</item>
+        <item name="android:backgroundTint">@color/text_input_layout_selector</item>
+
+
     </style>
 
     <style name="RoundButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
