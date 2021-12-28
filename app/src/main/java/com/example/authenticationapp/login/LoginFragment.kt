@@ -1,23 +1,18 @@
 package com.example.authenticationapp.login
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
-import com.example.authenticationapp.R
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.example.authenticationapp.R
 import com.example.authenticationapp.data.UserRepo
 import com.example.authenticationapp.databinding.LoginFragmentBinding
 import com.example.authenticationapp.forgot.ForgotPasswordFragment
 import com.example.authenticationapp.register.RegisterFragment
-import java.net.PasswordAuthentication
 
 class LoginFragment : Fragment() {
 
@@ -30,11 +25,13 @@ class LoginFragment : Fragment() {
     }
     private lateinit var binding: LoginFragmentBinding
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.login_fragment, container, false)
+
 
         binding.loginBtn.setOnClickListener {
             Log.d("click", "clickedloginbtn")
