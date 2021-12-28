@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.authenticationapp.R
+import com.example.authenticationapp.VMFactory
 import com.example.authenticationapp.data.UserRepo
 import com.example.authenticationapp.databinding.LoginFragmentBinding
 import com.example.authenticationapp.forgot.ForgotPasswordFragment
@@ -21,7 +22,7 @@ class LoginFragment : Fragment() {
     }
 
     private val viewModel: LoginViewModel by viewModels {
-        LoginVMFactory(UserRepo())
+        VMFactory(UserRepo())
     }
     private lateinit var binding: LoginFragmentBinding
 
