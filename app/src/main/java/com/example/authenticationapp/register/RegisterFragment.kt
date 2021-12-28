@@ -34,7 +34,12 @@ class RegisterFragment : Fragment() {
 
         binding.registrationBtn.setOnClickListener {
             Log.d("click", "clickedregisterbtn")
-            requireActivity().supportFragmentManager.popBackStack()
+            viewModel.registerUser(
+                binding.emailEt.text.toString(),
+                binding.firstnameEt.text.toString(),
+                binding.lastnameEt.text.toString(),
+                binding.passwordEt.text.toString()
+            )
 
         }
         return binding.root
