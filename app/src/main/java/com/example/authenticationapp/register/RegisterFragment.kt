@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.authenticationapp.R
+import com.example.authenticationapp.VMFactory
 import com.example.authenticationapp.data.UserRepo
 import com.example.authenticationapp.databinding.RegisterFragmentBinding
 
@@ -19,7 +20,7 @@ class RegisterFragment : Fragment() {
     }
 
     private val viewModel: RegisterViewModel by viewModels {
-        RegisterVMFactory(UserRepo())
+        VMFactory(UserRepo())
     }
     private lateinit var binding: RegisterFragmentBinding
 
@@ -33,7 +34,12 @@ class RegisterFragment : Fragment() {
 
         binding.registrationBtn.setOnClickListener {
             Log.d("click", "clickedregisterbtn")
-            requireActivity().supportFragmentManager.popBackStack()
+            viewModel.registerUser(
+                binding.emailEt.text.toString(),
+                binding.firstnameEt.text.toString(),
+                binding.lastnameEt.text.toString(),
+                binding.passwordEt.text.toString()
+            )
 
         }
         return binding.root
