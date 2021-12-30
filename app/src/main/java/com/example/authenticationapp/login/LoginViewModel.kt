@@ -12,7 +12,7 @@ class LoginViewModel internal constructor(userRepo: UserRepo) : ViewModel() {
 
     val authService : AuthService = AuthService.AuthServiceCreator.newService()
 
-    fun registerUser(email: String, password: String){
+    fun login(email: String, password: String){
         viewModelScope.launch(Dispatchers.IO) {
             val response = authService.login( email, password)
             if (response.isSuccessful) {
@@ -21,7 +21,7 @@ class LoginViewModel internal constructor(userRepo: UserRepo) : ViewModel() {
 
                 }
             } else {
-
+                    // TODO handle error state
 
             }
 

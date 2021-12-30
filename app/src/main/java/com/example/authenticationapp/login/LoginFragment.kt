@@ -36,6 +36,8 @@ class LoginFragment : Fragment() {
 
         binding.loginBtn.setOnClickListener {
             Log.d("click", "clickedloginbtn")
+            viewModel.login(binding.emailEt.text.toString(),
+                binding.passwordEt.text.toString())
         }
 
         binding.registrationBtn.setOnClickListener {

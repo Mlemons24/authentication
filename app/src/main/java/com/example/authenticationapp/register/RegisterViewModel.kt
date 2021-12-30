@@ -22,7 +22,7 @@ class RegisterViewModel internal constructor(userRepo: UserRepo) : ViewModel() {
                 }
             } else {
 
-
+                // TODO handle error state
             }
 
         }
