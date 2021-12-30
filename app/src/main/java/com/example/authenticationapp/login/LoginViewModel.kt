@@ -8,7 +8,7 @@ import com.example.authenticationapp.data.service.AuthService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class LoginViewModel internal constructor(userRepo: UserRepo) : ViewModel() {
+class LoginViewModel internal constructor(private val userRepo: UserRepo) : ViewModel() {
 
     val authService : AuthService = AuthService.AuthServiceCreator.newService()
 
@@ -18,7 +18,7 @@ class LoginViewModel internal constructor(userRepo: UserRepo) : ViewModel() {
             if (response.isSuccessful) {
                 response.body()?.let {
                     Log.d("user","user= $it.email")
-
+                    userRepo.insertUser(it)
                 }
             } else {
                     // TODO handle error state

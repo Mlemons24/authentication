@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.authenticationapp.R
 import com.example.authenticationapp.VMFactory
+import com.example.authenticationapp.data.AppDatabase
 import com.example.authenticationapp.data.UserRepo
 import com.example.authenticationapp.databinding.ForgotPasswordFragmentBinding
 
@@ -18,9 +19,9 @@ class ForgotPasswordFragment : Fragment() {
     companion object {
         fun newInstance() = ForgotPasswordFragment()
     }
-
+    private val userDao= AppDatabase.getInstance(requireContext()).userDao()
     private val viewModel: ForgotPasswordViewModel by viewModels {
-        VMFactory(UserRepo())
+        VMFactory(UserRepo(userDao))
     }
 
     private lateinit var binding: ForgotPasswordFragmentBinding
