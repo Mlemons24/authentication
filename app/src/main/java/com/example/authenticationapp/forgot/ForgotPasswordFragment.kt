@@ -19,7 +19,7 @@ class ForgotPasswordFragment : Fragment() {
     companion object {
         fun newInstance() = ForgotPasswordFragment()
     }
-    private val userDao= AppDatabase.getInstance(requireContext()).userDao()
+    private val userDao by lazy{ AppDatabase.getInstance(requireContext()).userDao()}
     private val viewModel: ForgotPasswordViewModel by viewModels {
         VMFactory(UserRepo(userDao))
     }

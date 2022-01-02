@@ -19,7 +19,7 @@ class RegisterFragment : Fragment() {
     companion object {
         fun newInstance() = RegisterFragment()
     }
-    private val userDao= AppDatabase.getInstance(requireContext()).userDao()
+    private val userDao by lazy{ AppDatabase.getInstance(requireContext()).userDao()}
     private val viewModel: RegisterViewModel by viewModels {
         VMFactory(UserRepo(userDao))
     }
