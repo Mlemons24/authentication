@@ -1,4 +1,4 @@
-package com.example.authenticationapp.login
+package com.codingwithmatt.authenticationapp.login
 
 import android.os.Bundle
 import android.util.Log
@@ -8,13 +8,13 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.authenticationapp.R
-import com.example.authenticationapp.VMFactory
-import com.example.authenticationapp.data.AppDatabase
-import com.example.authenticationapp.data.UserRepo
-import com.example.authenticationapp.databinding.LoginFragmentBinding
-import com.example.authenticationapp.forgot.ForgotPasswordFragment
-import com.example.authenticationapp.register.RegisterFragment
+import com.codingwithmatt.authenticationapp.R
+import com.codingwithmatt.authenticationapp.VMFactory
+import com.codingwithmatt.authenticationapp.data.AppDatabase
+import com.codingwithmatt.authenticationapp.data.UserRepo
+import com.codingwithmatt.authenticationapp.databinding.LoginFragmentBinding
+import com.codingwithmatt.authenticationapp.forgot.ForgotPasswordFragment
+import com.codingwithmatt.authenticationapp.register.RegisterFragment
 
 class LoginFragment : Fragment() {
 

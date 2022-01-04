@@ -1,4 +1,4 @@
-package com.example.authenticationapp
+package com.codingwithmatt.authenticationapp
 
 import org.junit.Test
 

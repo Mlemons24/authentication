@@ -1,4 +1,4 @@
-package com.example.authenticationapp.data.model
+package com.codingwithmatt.authenticationapp.data.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

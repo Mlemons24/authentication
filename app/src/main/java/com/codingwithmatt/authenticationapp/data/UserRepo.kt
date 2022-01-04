@@ -1,7 +1,7 @@
-package com.example.authenticationapp.data
+package com.codingwithmatt.authenticationapp.data
 
-import com.example.authenticationapp.data.dao.UserDao
-import com.example.authenticationapp.data.model.User
+import com.codingwithmatt.authenticationapp.data.dao.UserDao
+import com.codingwithmatt.authenticationapp.data.model.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

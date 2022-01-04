@@ -1,9 +1,8 @@
-package com.example.authenticationapp.data.service
+package com.codingwithmatt.authenticationapp.data.service
 
-import com.example.authenticationapp.data.model.User
+import com.codingwithmatt.authenticationapp.data.model.User
 import com.google.gson.Gson
 import okhttp3.Interceptor
-import okhttp3.OkHttp
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Response

@@ -1,11 +1,11 @@
-package com.example.authenticationapp
+package com.codingwithmatt.authenticationapp
 
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModel
-import com.example.authenticationapp.data.UserRepo
-import com.example.authenticationapp.forgot.ForgotPasswordViewModel
-import com.example.authenticationapp.login.LoginViewModel
-import com.example.authenticationapp.register.RegisterViewModel
+import com.codingwithmatt.authenticationapp.data.UserRepo
+import com.codingwithmatt.authenticationapp.forgot.ForgotPasswordViewModel
+import com.codingwithmatt.authenticationapp.login.LoginViewModel
+import com.codingwithmatt.authenticationapp.register.RegisterViewModel
 
 
 class VMFactory(private val userRepo: UserRepo) : ViewModelProvider.NewInstanceFactory()  {

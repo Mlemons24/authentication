@@ -1,8 +1,8 @@
-package com.example.authenticationapp.data.dao
+package com.codingwithmatt.authenticationapp.data.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.authenticationapp.data.model.User
+import com.codingwithmatt.authenticationapp.data.model.User
 
 @Dao
 interface UserDao {

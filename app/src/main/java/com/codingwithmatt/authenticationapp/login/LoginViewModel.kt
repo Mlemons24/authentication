@@ -1,10 +1,10 @@
-package com.example.authenticationapp.login
+package com.codingwithmatt.authenticationapp.login
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.authenticationapp.data.UserRepo
-import com.example.authenticationapp.data.service.AuthService
+import com.codingwithmatt.authenticationapp.data.UserRepo
+import com.codingwithmatt.authenticationapp.data.service.AuthService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

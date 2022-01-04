@@ -1,4 +1,4 @@
-package com.example.authenticationapp.register
+package com.codingwithmatt.authenticationapp.register
 
 import android.os.Bundle
 import android.util.Log
@@ -8,11 +8,11 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.authenticationapp.R
-import com.example.authenticationapp.VMFactory
-import com.example.authenticationapp.data.AppDatabase
-import com.example.authenticationapp.data.UserRepo
-import com.example.authenticationapp.databinding.RegisterFragmentBinding
+import com.codingwithmatt.authenticationapp.R
+import com.codingwithmatt.authenticationapp.VMFactory
+import com.codingwithmatt.authenticationapp.data.AppDatabase
+import com.codingwithmatt.authenticationapp.data.UserRepo
+import com.codingwithmatt.authenticationapp.databinding.RegisterFragmentBinding
 
 class RegisterFragment : Fragment() {
 

@@ -1,8 +1,8 @@
-package com.example.authenticationapp
+package com.codingwithmatt.authenticationapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.authenticationapp.login.LoginFragment
+import com.codingwithmatt.authenticationapp.login.LoginFragment
 
 class AuthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
