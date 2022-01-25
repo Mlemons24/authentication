@@ -23,7 +23,7 @@ class LoginFragment : Fragment() {
         fun newInstance() = LoginFragment()
     }
 
-    private val userDao by lazy {AppDatabase.getInstance(requireContext()).userDao()}
+    private val userDao by lazy { AppDatabase.getInstance(requireContext()).userDao() }
     private val viewModel: LoginViewModel by viewModels {
         VMFactory(UserRepo(userDao))
     }
@@ -36,17 +36,21 @@ class LoginFragment : Fragment() {
     ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.login_fragment, container, false)
 
-        viewModel.user.observe(viewLifecycleOwner,{
-            requireActivity().supportFragmentManager.beginTransaction()
-                .add(R.id.container, WelcomeFragment.newInstance(), "welcome")
-                .addToBackStack("welcome")
-                .commit()
+        viewModel.user.observe(viewLifecycleOwner, {
+            it?.let {
+                requireActivity().supportFragmentManager.beginTransaction()
+                    .replace(R.id.container, WelcomeFragment.newInstance(), "welcome")
+                    .addToBackStack("welcome")
+                    .commit()
+            }
         })
 
         binding.loginBtn.setOnClickListener {
             Log.d("click", "clickedloginbtn")
-            viewModel.login(binding.emailEt.text.toString(),
-                binding.passwordEt.text.toString())
+            viewModel.login(
+                binding.emailEt.text.toString(),
+                binding.passwordEt.text.toString()
+            )
         }
 
         binding.registrationBtn.setOnClickListener {
