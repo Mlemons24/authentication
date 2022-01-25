@@ -10,27 +10,23 @@ import kotlinx.coroutines.launch
 
 class LoginViewModel internal constructor(private val userRepo: UserRepo) : ViewModel() {
 
-    val authService : AuthService = AuthService.AuthServiceCreator.newService()
-
-    fun login(email: String, password: String){
+    val authService: AuthService = AuthService.AuthServiceCreator.newService()
+    val user = userRepo.fetchSelf()
+    fun login(email: String, password: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            val response = authService.login( email, password)
+            val response = authService.login(email, password)
             if (response.isSuccessful) {
                 response.body()?.let {
-                    Log.d("user","user= $it.email")
+                    Log.d("user", "user= $it.email")
                     userRepo.insertUser(it)
                 }
             } else {
-                    // TODO handle error state
+                // TODO handle error state
 
             }
 
         }
     }
-
-
-
-
 
 
 }

@@ -15,6 +15,7 @@ import com.codingwithmatt.authenticationapp.data.UserRepo
 import com.codingwithmatt.authenticationapp.databinding.LoginFragmentBinding
 import com.codingwithmatt.authenticationapp.forgot.ForgotPasswordFragment
 import com.codingwithmatt.authenticationapp.register.RegisterFragment
+import com.codingwithmatt.authenticationapp.welcome.WelcomeFragment
 
 class LoginFragment : Fragment() {
 
@@ -35,6 +36,12 @@ class LoginFragment : Fragment() {
     ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.login_fragment, container, false)
 
+        viewModel.user.observe(viewLifecycleOwner,{
+            requireActivity().supportFragmentManager.beginTransaction()
+                .add(R.id.container, WelcomeFragment.newInstance(), "welcome")
+                .addToBackStack("welcome")
+                .commit()
+        })
 
         binding.loginBtn.setOnClickListener {
             Log.d("click", "clickedloginbtn")
